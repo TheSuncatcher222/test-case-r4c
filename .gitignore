@@ -10,6 +10,7 @@ db.sqlite3
 db.sqlite3-journal
 */migrations/*.py
 !*/migrations/__init__.py
+*/static/*
 
 # Environments
 .env
@@ -31,5 +32,3 @@ __pypackages__/
 
 # Pytest staff
 .pytest_cache/
-
-1.py
