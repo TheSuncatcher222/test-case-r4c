@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# GitHub actions
+.github/
+
+# PEP 582
+__pypackages__/
+
+# pyenv
+.python-version
+
+# Pytest staff
+.pytest_cache/
+
+1.py
