@@ -9,10 +9,10 @@ class CustomerAdmin(admin.ModelAdmin):
 
     Атрибуты:
         - list_display (tuple) - список полей для отображения в интерфейсе:
-            - ID (pk)
-            - электронная почта (email)
+            - ID заказчика(pk)
+            - электронная почта заказчика (email)
         - search_fields (tuple) - список полей для поиска объектов:
-            - электронная почта (email)
+            - электронная почта заказчика (email)
         - list_per_page (int) - количество объектов на одной странице
     """
     list_display = (
