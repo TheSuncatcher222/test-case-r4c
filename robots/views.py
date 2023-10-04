@@ -14,13 +14,11 @@ from R4C.core import (
 )
 from .models import Robot
 
-ROBOT_MODEL_PATTERN: str = r'^[0-9A-Z]{2}$'
-
 
 def validate_robot_model_version(value: str) -> str | None:
     """
     Производит валидацию модели или версии робота.
-    
+
     В случае корректности данных возвращает str объект.
     Иначе - возвращает None."""
     if value is None or not re.fullmatch(ROBOT_MODEL_PATTERN, value):
@@ -31,7 +29,7 @@ def validate_robot_model_version(value: str) -> str | None:
 def validate_robot_created(value: str) -> datetime | None:
     """
     Производит валидацию даты создания робота.
-    
+
     В случае корректности данных возвращает datetime объект.
     Иначе - возвращает None.
     """
@@ -77,9 +75,10 @@ def robots_post(request: dict) -> tuple[dict[str, str], int]:
         created=created,
     )
     return (
-        {"Succeed": (
-            f'Robot {new_robot.serial} ({new_robot.created}) '
-             'has been successfully added to the database.')
+        {
+            "Succeed": (
+                f'Robot {new_robot.serial} ({new_robot.created}) '
+                'has been successfully added to the database.')
         },
         STATUS_CODE_CREATED,
     )
