@@ -5,7 +5,7 @@ from django.db import models
 
 from customers.models import Customer
 
-SERIAL_PATTERN: str = r'[0-9A-Z]{2}-[0-9A-Z]{2}'
+SERIAL_PATTERN: str = r'^[0-9A-Z]{2}-[0-9A-Z]{2}$'
 
 
 def robot_serial_validator(value: str):
