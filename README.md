@@ -31,3 +31,42 @@ ___
 - Написать понятный и поддерживаемый код для каждой задачи 
 - Сделать по 1 отдельному PR с решением для каждой задачи
 - Прислать ссылку на своё решение
+
+
+## Как протестировать код?
+
+✅ Установить и активировать виртуальное окружение (целевая версия Python 3.11)
+
+> Windows
+
+```
+python -3.11 -m venv venv
+source venv/scripts/activate
+```
+
+> Linux
+
+```sh
+python3 -m venv venv
+source venv/bin/activate
+```
+
+> MacOS
+
+```sh
+brew link python@3.9
+source venv/bin/activate
+```
+
+✅ Обновить загрузчик PIP и установить зависимости из requirements.txt
+
+```sh
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+✅ Запустить тесты
+
+```sh
+pytest
+```
