@@ -109,6 +109,5 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_L10N = True
-
-USE_TZ = True
+# robots are created manually with datetime format '%Y-%m-%d %H:%M:%S'
+USE_TZ = False
