@@ -31,7 +31,7 @@ ___
 - Написать понятный и поддерживаемый код для каждой задачи 
 - Сделать по 1 отдельному PR с решением для каждой задачи
 - Прислать ссылку на своё решение
-
+___
 
 ## Как протестировать код?
 
@@ -64,6 +64,14 @@ source venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
+
+✅ Создать миграционные данные ORM и (опционально) произвести миграции
+
+```sh
+python manage.py makemigrations
+python manage.py migrate
+```
+
 
 ✅ Запустить тесты
 
