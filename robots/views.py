@@ -21,7 +21,8 @@ def validate_robot_model_version(value: str) -> str | None:
 
     В случае корректности данных возвращает str объект.
     Иначе - возвращает None."""
-    if value is None or not re.fullmatch(ROBOT_MODEL_PATTERN, value):
+    if (not isinstance(value, str) or # noqa (W504)
+            not re.fullmatch(ROBOT_MODEL_PATTERN, value)):
         return None
     return value
 
