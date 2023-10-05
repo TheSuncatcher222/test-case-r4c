@@ -40,7 +40,7 @@ ___
 > Windows
 
 ```
-python -3.11 -m venv venv
+py -3.11 -m venv venv
 source venv/scripts/activate
 ```
 
@@ -72,9 +72,17 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-
 ✅ Запустить тесты
 
 ```sh
 pytest
+```
+___
+
+## Как запустить проект после тестирования?
+
+✅ Запустить ASGI сервер
+
+```sh
+python -m uvicorn R4C.asgi:application --reload
 ```
