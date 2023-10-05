@@ -77,6 +77,25 @@ INSTALLED_APPS = [
 ROOT_URLCONF = 'R4C.urls'
 
 
+"""Email settings."""
+
+
+if DEBUG:
+    EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
+    EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+DEFAULT_FROM_EMAIL = 'Robots for consumers'
+
+EMAIL_HOST = os.getenv('EMAIL_HOST')
+EMAIL_PORT = int(os.getenv('EMAIL_PORT'))
+EMAIL_USE_TLS = bool(os.getenv('EMAIL_USE_TLS'))
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+
+
 """Static and media files."""
 
 
