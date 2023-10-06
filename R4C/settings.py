@@ -86,7 +86,6 @@ if DEBUG:
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 DEFAULT_FROM_EMAIL = 'Robots for consumers'
 
 EMAIL_HOST = os.getenv('EMAIL_HOST')
